@@ -10,7 +10,8 @@
       <cardItem color="#DDA451">
         <template #title>疑似</template>
         <template #num>{{allData.suspect}}</template>
-        <template #compare>+{{allData.history[0].suspectedNum - allData.history[1].suspectedNum}}</template>
+        <template #compare v-if="allData.history[0].suspectedNum > allData.history[1].suspectedNum">+{{allData.history[0].suspectedNum - allData.history[1].suspectedNum}}</template>
+        <template #compare else>{{allData.history[0].suspectedNum - allData.history[1].suspectedNum}}</template>
       </cardItem>
       <cardItem color="#919399">
         <template #title>死亡</template>
@@ -42,7 +43,12 @@ export default {
     }
   },
   methods: {},
-  mounted() {},
+  mounted() {
+    // console.log(this.allData);
+    console.log(this.allData.history[0].suspectedNum);
+    console.log(this.allData.history[1].suspectedNum);
+
+  },
   watch: {},
   computed: {},
   filters: {}

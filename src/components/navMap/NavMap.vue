@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import "echarts/lib/component/visualMap";
+// import "echarts/lib/component/visualMap";
 import pinyin from "js-pinyin";
 pinyin.setOptions({ checkPolyphone: false, charCase: 0 });
 export default {
