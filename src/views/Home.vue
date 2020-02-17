@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <navHeader></navHeader>
-
     <a-tabs defaultActiveKey="1">
       <a-tab-pane tab="疫情地图" key="1">
         <detail :allData="allData" v-if="allData && allData.history"></detail>
