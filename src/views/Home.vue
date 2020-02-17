@@ -55,7 +55,7 @@ export default {
       api.getData().then(res => {
         if (res.errcode === 0) {
           this.allData = res.data;
-          console.log(this.allData);
+          // console.log(this.allData);
         }
       });
     },

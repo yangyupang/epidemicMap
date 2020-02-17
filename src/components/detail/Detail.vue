@@ -45,8 +45,8 @@ export default {
   methods: {},
   mounted() {
     // console.log(this.allData);
-    console.log(this.allData.history[0].suspectedNum);
-    console.log(this.allData.history[1].suspectedNum);
+    // console.log(this.allData.history[0].suspectedNum);
+    // console.log(this.allData.history[1].suspectedNum);
 
   },
   watch: {},

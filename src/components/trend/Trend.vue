@@ -1,25 +1,25 @@
 <template>
   <div>
     <ve-line :data="chartData1" :colors="colors1"></ve-line>
-    <ve-line :data="chartData2"></ve-line>
+    <ve-line :data="chartData2" :colors="colors2"></ve-line>
     <div class="title">
       全国
-      <span class="active">确诊人数</span>总览
+      <span class="active1">确诊人数</span>总览
     </div>
     <ve-pie :data="chartData3"></ve-pie>
     <div class="title">
       全国
-      <span class="active">疑似人数</span>总览
+      <span class="active2">疑似人数</span>总览
     </div>
     <ve-pie :data="chartData4"></ve-pie>
     <div class="title">
       全国
-      <span class="active1">治愈人数</span>总览
+      <span class="active3">治愈人数</span>总览
     </div>
     <ve-pie :data="chartData5"></ve-pie>
     <div class="title">
       全国
-      <span class="active2">死亡人数</span>总览
+      <span class="active4">死亡人数</span>总览
     </div>
     <ve-pie :data="chartData6"></ve-pie>
   </div>
@@ -35,7 +35,7 @@ export default {
         columns: ["date", "确诊人数", "疑似人数"],
         rows: []
       },
-      colors1: ["#f4e0c4", "#e57471"],
+      colors1: ["#e67a77", "#dda451"],
       //治愈和死亡
       chartData2: {
         columns: ["date", "治愈人数", "死亡人数"],
@@ -61,7 +61,7 @@ export default {
         columns: ["name", "死亡人数"],
         rows: []
       },
-      colors2: ["#f4e0c4", "#e57471"]
+      colors2: ["#8AC460", "#919399"]
     };
   },
   props: {
@@ -176,13 +176,16 @@ export default {
 .title {
   margin: 20px 0 20px 20px;
   font-weight: 700;
-  .active {
-    color: skyblue;
-  }
   .active1 {
-    color: rgb(45, 252, 45);
+    color: #e67a77;
   }
   .active2 {
+    color: #dda451;
+  }
+  .active3 {
+    color: rgb(45, 252, 45);
+  }
+  .active4 {
     color: rgb(197, 201, 197);
   }
 }
